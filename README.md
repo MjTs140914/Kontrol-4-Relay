@@ -26,7 +26,7 @@ Proyek ini adalah **kontrol 4 relay** berbasis Arduino dengan input dari:
 
 ---
 
-## 🔌 Wiring Diagram (ASCII)
+## 🔌 Wiring Diagram
 
 ```text
 Arduino UNO/Nano
