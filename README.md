@@ -46,7 +46,7 @@ Arduino UNO/Nano
 │ 5V   → VCC Relay, RFID, Touch
 │ GND  → Semua GND (Relay, RFID, Touch, Buzzer)
 └──────────────┘
-
+```
 
 > **Catatan Wiring**  
 > - Relay harus tipe **aktif LOW** (LOW = ON, HIGH = OFF).  
