@@ -1,3 +1,46 @@
+/*
+  Multi-Control Relay System (Arduino + RFID + Touch + Button)
+  ------------------------------------------------------------
+  Fitur:
+  - 4 Relay output (aktif LOW)
+    * Relay 1–3: dikontrol via tombol (klik 1–3)
+    * Relay 4 : khusus untuk mesin, bisa dikontrol via tombol (klik 4), sensor sentuh, atau kartu RFID
+  - Penyimpanan status relay, mode beep, RFID enable/disable, touch enable/disable di EEPROM
+  - Mode beep (1–5 variasi nada, 6 = diam)
+  - Toggle multi-click tombol:
+      1 klik  → Relay 1
+      2 klik  → Relay 2
+      3 klik  → Relay 3
+      4 klik  → Relay 4 (mesin)
+      6 klik  → Ganti mode beep
+      7 klik  → Aktif/Nonaktifkan RFID
+      8 klik  → Aktif/Nonaktifkan Touch
+      Long press (5 detik) → Toggle Relay 1–3 sekaligus
+  - RFID (MFRC522) untuk akses Relay 4 (validasi UID kartu)
+  - Sensor sentuh (touch) untuk kontrol Relay 4
+  - Buzzer untuk notifikasi (ON, OFF, error, mode change, welcome tone)
+  - Watchdog untuk reset otomatis modul RFID jika hang
+
+  Hardware:
+  - Board   : Arduino UNO / Nano
+  - Relay   : Pin D3, D4, D5, D6 (aktif LOW)
+  - PushBtn : Pin D2
+  - Touch   : Pin D7
+  - Buzzer  : Pin D8
+  - RFID    : SDA=10, RST=9, MOSI=11, MISO=12, SCK=13
+
+  Library Dependencies:
+  - ClickButton.h
+  - EEPROM.h
+  - SPI.h
+  - MFRC522.h
+
+  Author   : MjTs-140914™
+  Tahun    : 2025
+  License  : Open-source / bebas digunakan dengan mencantumkan kredit
+*/
+
+
 #include <ClickButton.h>
 #include <EEPROM.h>
 #include <SPI.h>
