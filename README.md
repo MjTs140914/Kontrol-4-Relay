@@ -28,7 +28,23 @@ Proyek ini adalah **kontrol 4 relay** berbasis Arduino dengan input dari:
 
 ## 🔌 Wiring Diagram (ASCII)
 
-
+Arduino UNO/Nano
+┌──────────────┐
+│ D2 → Push Button
+│ D3 → Relay 1 (aktif LOW)
+│ D4 → Relay 2 (aktif LOW)
+│ D5 → Relay 3 (aktif LOW)
+│ D6 → Relay 4 (aktif LOW, untuk mesin)
+│ D7 → Touch Sensor Input
+│ D8 → Buzzer
+│ D9 → RFID RST
+│ D10 → RFID SDA/SS
+│ D11 → RFID MOSI
+│ D12 → RFID MISO
+│ D13 → RFID SCK
+│ 5V → VCC Relay, RFID, Touch
+│ GND → Semua GND (Relay, RFID, Touch, Buzzer)
+└──────────────┘
 
 > **Catatan Wiring**  
 > - Relay harus tipe **aktif LOW** (LOW = ON, HIGH = OFF).  
